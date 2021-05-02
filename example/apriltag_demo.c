@@ -44,7 +44,6 @@ either expressed or implied, of the Regents of The University of Michigan.
 #include "tagCircle21h7.h"
 #include "tagCircle49h12.h"
 #include "tagCustom48h12.h"
-#include "tagCustom8h1.h"
 #include "tagStandard41h12.h"
 #include "tagStandard52h13.h"
 
@@ -99,8 +98,6 @@ int main(int argc, char *argv[])
         tf = tagStandard52h13_create();
     } else if (!strcmp(famname, "tagCustom48h12")) {
         tf = tagCustom48h12_create();
-    } else if (!strcmp(famname, "tagCustom8h1")) {
-        tf = tagCustom8h1_create();
     } else {
         printf("Unrecognized tag family name. Use e.g. \"tag36h11\".\n");
         exit(-1);
@@ -263,8 +260,6 @@ int main(int argc, char *argv[])
         tagStandard52h13_destroy(tf);
     } else if (!strcmp(famname, "tagCustom48h12")) {
         tagCustom48h12_destroy(tf);
-    } else if (!strcmp(famname, "tagCustom8h1")) {
-        tagCustom8h1_destroy(tf);
     }
 
     getopt_destroy(getopt);
